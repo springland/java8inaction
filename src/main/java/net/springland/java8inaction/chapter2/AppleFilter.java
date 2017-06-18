@@ -67,6 +67,7 @@ public class AppleFilter {
         return result ;
     }
 
+
     public static void  printPrettyApples(List<Apple> inventory , AppleFormatter p)
     {
         for(Apple apple: inventory)
@@ -74,5 +75,18 @@ public class AppleFilter {
            String msg = p.format(apple);
            logger.info(msg);
         }
+    }
+
+    public static <T>  List<T> filter(List<T> inventory , Predicate<T> p)
+    {
+        List<T> result = new ArrayList<>();
+        for(T e :  inventory)
+        {
+            if(p.test(e))
+            {
+                result.add(e);
+            }
+        }
+        return result ;
     }
 }

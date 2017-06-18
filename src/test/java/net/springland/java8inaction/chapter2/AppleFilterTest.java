@@ -95,5 +95,25 @@ public class AppleFilterTest {
 
         }
 
+
+        filtered = AppleFilter.filterByPredicate(inventory , (Apple apple)-> apple.getWeight() > 120);
+        for(Apple apple1: filtered)
+        {
+            assertTrue(apple1.getWeight() >120);
+
+        }
+
+    }
+
+    @Test
+    public void testFilter()
+    {
+        List<Apple> inventory = getInventory();
+        List<Apple> redApples = AppleFilter.filter(inventory , (Apple apple) -> Color.RED.equals(apple.getColor()));
+        for(Apple apple1: redApples)
+        {
+            assertEquals(apple1.getColor() , Color.RED);
+
+        }
     }
 }

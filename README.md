@@ -24,3 +24,6 @@ Java has reduce in two forms , reduce and collect
 
 ##  [CompletableFuture](https://www.youtube.com/watch?v=0hQvWIdwnw4&t=9442s)
     
+1. Pool induced deadlock  - calculate total of an array
+2. ForkJoinPool - calculate total of an array
+3. Parallel stream to calculate the total of an array
